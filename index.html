@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinária Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <header id="main-header">
+            <div class="header-content">
+                <img src="logoBar.png" alt="Logo Culinária Gourmet" class="logo">
+                <nav>
+                    <a href="#">Início</a>
+                    <a href="#">Receitas</a>
+                    <a href="#">Carrinho</a>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <section id="search-section">
+                <input type="text" id="recipe-search" placeholder="Buscar prato por nome ou ingrediente...">
+                <button type="button">Buscar</button>
+            </section>
+
+            <div class="content-columns">
+                <section id="recipe-form-section">
+                    <div id="form-card">
+                        <h1>Cadastrar Novo Prato</h1>
+                        <form id="cadastro-form">
+                            <div class="form-group">
+                                <label for="nomeComida">Nome do Prato</label>
+                                <input type="text" id="nomeComida" placeholder="Ex: Lasanha à Bolonhesa" required> 
+                            </div>
+                            <div class="form-group">
+                                <label for="imagemComida">Imagem do Prato</label>
+                                <input type="file" id="imagemComida" accept="image/*" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ingredientes">Ingredientes e Quantidades</label>
+                                <textarea id="ingredientes" placeholder="Ex: 500g de carne moída, 1 pacote de massa para lasanha, 2 latas de molho de tomate..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="modoPreparo">Modo de Preparo</label>
+                                <textarea id="modoPreparo" placeholder="Ex: Prepare o molho bolonhesa... Monte as camadas... Asse por 30 minutos..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="tempoPreparo">Tempo total de preparo</label>
+                                <input type="text" id="tempoPreparo" placeholder="Ex: 1 hora e 30 minutos" required>
+                            </div>
+                            <button class="form-btn" type="submit">Cadastrar Receita de Prato</button>
+                        </form>
+                    </div>
+                </section>
+
+                <section id="recipe-display-section">
+                    <h2>Meus Pratos Cadastrados</h2>
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev" id="prev-btn">&#10094;</button>
+                        <div class="carousel-track" id="recipe-track">
+                            </div>
+                        <button class="carousel-btn next" id="next-btn">&#10095;</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
